@@ -20,4 +20,8 @@ class Triangle extends Shape
     return $this->hauteur + $this->base + $this->diagonale;
   }
 
+  public function area()
+  {
+    return 0.5 * ($this->base * $this->hauteur); 
+  }
 }
