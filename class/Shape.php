@@ -14,15 +14,35 @@ abstract class Shape // classe abstraite qu'on ne peux pas instancier
     $this->name = $name;
   }
 
-  public function displayPerimeter()
+  public function displayPerimeter($unit = 'cm')
   {
+    if($unit === 'mm'){
+      $perimeter = $this->perimeterToMm();
+    } else {
+      $perimeter = $this->perimeter();
+    }
     echo "Le " . $this->name. " a un périmètre de " .
-      $this->perimeter() . self::UNIT;
+      $perimeter . ' ' .$unit;
   }
 
-  public function displayArea()
+  public function displayArea($unit = ' cm')
   {
+    if($unit === 'mm'){
+      $area = $this->areaToMm();
+    } else {
+      $area = $this->area();
+    }
     echo "Le " . $this->name. " a une surface de " .
-      $this->area() . self::UNIT;
+      $area . ' ' . $unit;
+  }
+
+  public function perimeterToMm()
+  {
+    return $this->perimeter() * 10;
+  }
+
+  public function areaToMm()
+  {
+    return $this->area() * 10;
   }
 }
