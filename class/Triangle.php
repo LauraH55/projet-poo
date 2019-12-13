@@ -6,12 +6,12 @@ class Triangle extends Shape
   private $base;
   private $diagonale;
 
-  public function __construct(int $hauteur, $base, $diagonale)
+  public function __construct(int $hauteur, $base, $diagonale, $name)
   {
     $this->hauteur = $hauteur;
     $this->base = $base;
     $this->diagonale = $diagonale;
-
+    parent::__construct($name);
 
   }
 
@@ -22,6 +22,6 @@ class Triangle extends Shape
 
   public function area()
   {
-    return 0.5 * ($this->base * $this->hauteur); 
+    return 0.5 * ($this->base * $this->hauteur);
   }
 }

@@ -4,9 +4,10 @@ class Round extends Shape
 {
   private $ray;
 
-  public function __construct(int $ray)
+  public function __construct(int $ray, $name)
   {
     $this->ray = $ray;
+    parent::__construct($name);
 
   }
 

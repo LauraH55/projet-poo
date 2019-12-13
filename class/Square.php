@@ -1,15 +1,16 @@
 <?php
 
 
-class Square
+class Square extends Shape
 {
   const NB_SIDE = 4;
 
   private $side;
 
-  public function __construct(int $side)
+  public function __construct(int $side, $name)
   {
     $this->side = $side;
+    parent::__construct($name);
 
 
   }
