@@ -7,14 +7,14 @@ require('class/Triangle.php');
 $square1 = new Square(10); // instancie la classe // construit un carré de 10
 $square2 = new Square(24);
 
-echo 'Le carré a une surface de ', $square1->perimeter();
+echo 'Le carré a un périmètre de ', $square1->perimeter();
 echo '<br>';
 echo 'Le carré a une surface de ', $square2->perimeter();
 echo '<br>';
 
-echo 'Le carré a une aire de ', $square1->area();
+echo 'Le carré a un périmètre de ', $square1->area();
 echo '<br>';
-echo 'Le carré a une aire de ', $square2->area();
+echo 'Le carré a une surface de ', $square2->area();
 echo '<br>';
 
 $round1 = new Round(8);
