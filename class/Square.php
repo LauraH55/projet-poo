@@ -1,5 +1,6 @@
 <?php
 
+
 class Square
 {
   const NB_SIDE = 4;
@@ -17,6 +18,11 @@ class Square
   {
     return $this->side*self::NB_SIDE;
 
+  }
+
+  public function area()
+  {
+    return $this->side * $this->side;
   }
 
 }

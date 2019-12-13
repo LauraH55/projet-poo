@@ -1,6 +1,6 @@
 <?php
 
-class Round
+class Round extends Shape
 {
   private $ray;
 
@@ -16,5 +16,10 @@ class Round
 
   }
 
+  public function area()
+  {
+    return pi() * ($this->ray * $this->ray); // calcule de l'air
+    // pi(*pow($this->ray,2)) autre façon de calculer l'air
+  }
 
 }
